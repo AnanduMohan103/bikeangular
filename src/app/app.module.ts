@@ -8,7 +8,7 @@ import { AddbikeComponent } from './addbike/addbike.component';
 import { ViewbikeComponent } from './viewbike/viewbike.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import {HttpClientModule} from '@angular/common/http';
 const appRoutes:Routes=[
   {
     path:"",component:NavbarComponent
@@ -30,7 +30,9 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),FormsModule
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
